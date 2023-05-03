@@ -1,4 +1,6 @@
-import "./components/my-tabla.js";
-import "./components/my-header.js";
-import "./components/my-nav.js";
-import "./components/my-section.js";
+import "./components/myTable/my-tabla.js";
+import "./components/myHeader/my-header.js";
+import "./components/myNav/my-nav.js";
+import "./components/mySection/my-section.js";
+import "./components/myForm/my-form.js";
+import "./components/myFooter/my-footer.js";
