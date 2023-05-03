@@ -1,5 +1,6 @@
 {
     "conventionalCommits.scopes": [
-        "New Code"
+        "New Code",
+        "Add settings.json"
     ]
 }
