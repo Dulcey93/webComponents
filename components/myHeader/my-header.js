@@ -12,11 +12,11 @@ export default class MyHeader extends HTMLElement {
 
     handleEvent(e) {
         (e.type === "click") ? this.sendMessage(e) : undefined;
-        console.log("Hola se activó el handleEvent del Header");
     }
 
     sendMessage(e) {
         console.log(e);
+        console.log("Hola se activó el sendMessage del Header");
         e.preventDefault();
     }
 

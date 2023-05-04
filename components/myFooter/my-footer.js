@@ -11,7 +11,6 @@ export default class MyFooter extends HTMLElement {
     }
     handleEvent(e) {
         (e.type === "click") ? this.sendMessage(e) : undefined;
-        console.log("Hola se activó el handleEvent del footer");
     }
 
     sendMessage(e) {
@@ -24,10 +23,10 @@ export default class MyFooter extends HTMLElement {
             this.shadowRoot.innerHTML = html;
             let button = document.createElement("button");
             button.textContent = "Press me Footer!";
-            this.shadowRoot.append(button);
-            this.button = this.shadowRoot.querySelector("button");
+            this.footer = this.shadowRoot.querySelector("footer");
+            this.footer.appendChild(button);
             // El .bind es para que se renderice el metodo pero no se ejecuta hasta que se de click
-            this.button.addEventListener("click", this.handleEvent.bind(this));
+            this.footer.addEventListener("click", this.handleEvent.bind(this));
         });
     }
 
