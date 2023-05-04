@@ -1,18 +1,17 @@
-let pathName = new URL(import.meta.url).pathname;
-let name = pathName.split("/").pop().replace(".js", "");
-console.log(name);
+import config from "../../config.js";
 
-export default class myTabla extends HTMLElement {
+export default class MyTabla extends HTMLElement {
+    static url = import.meta.url;
     static async components(){
-        return await (await fetch(pathName.replace(".js", ".html"))).text();
+        return await (await fetch(config.endPoint(MyTabla.url).replace(".js", ".html"))).text();
     }
     constructor() {
         super();
         this.attachShadow({mode: "open"});
-        Promise.resolve(myTabla.components()).then(html => {
+        Promise.resolve(MyTabla.components()).then(html => {
             this.shadowRoot.innerHTML = html;
         });
         console.log("Etiqueta renderizada");
     }
 }
-customElements.define(name, myTabla);
+customElements.define(config.name(MyTabla.url), MyTabla);
