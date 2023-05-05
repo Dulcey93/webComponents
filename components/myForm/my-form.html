@@ -1,27 +1,17 @@
 <form>
-    <!-- 5 inputs de tipo radio que tengan una palabra al lado izquierdo cada uno, cada input tiene una id diferente-->
-    <div>
-        <input type="radio" id="radio1" name="radio" value="radio1">
-        <label for="radio1">Radio 1</label>
-    </div>
-    <div>
-        <input type="radio" id="radio2" name="radio" value="radio2">
-        <label for="radio2">Radio 2</label>
-    </div>
-    <div>
-        <input type="radio" id="radio3" name="radio" value="radio3">
-        <label for="radio3">Radio 3</label>
-    </div>
-    <div>
-        <input type="radio" id="radio4" name="radio" value="radio4">
-        <label for="radio4">Radio 4</label>
-    </div>
-    <div>
-        <input type="radio" id="radio5" name="radio" value="radio5">
-        <label for="radio5">Radio 5</label>
-    </div>
-
-</form>
+    <label for="input1" name="inputLabel">Input 1:</label>
+    <input type="text" id="input1" name="input1" required>
+  
+    <fieldset>
+      <legend>Select an option:</legend>
+      <label><input type="radio" name="radio" value="option1" required> Option 1</label>
+      <label><input type="radio" name="radio" value="option2" required> Option 2</label>
+      <label><input type="radio" name="radio" value="option3" required> Option 3</label>
+      <label><input type="radio" name="radio" value="option3" required> Option 4</label>
+      <label><input type="radio" name="radio" value="option3" required> Option 5</label>
+    </fieldset>
+  </form>
+  
 <style type="text/css">
     form{
         display: flex;
