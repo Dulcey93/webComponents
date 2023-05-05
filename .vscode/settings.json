@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "New Code",
-        "Add settings.json"
+        "Add settings.json",
+        "After Classroom"
     ]
 }
