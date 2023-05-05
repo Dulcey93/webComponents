@@ -3,7 +3,7 @@ import config from "../../config.js";
 export default class MyHeader extends HTMLElement {
     static url = import.meta.url;
     static async components() {
-        return await (await fetch(config.endPoint(MyHeader.url).replace(".js", ".html"))).text();
+        return await (await fetch(config.endPoint(MyHeader.url))).text();
     }
     constructor() {
         super();
